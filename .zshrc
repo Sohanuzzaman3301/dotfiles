@@ -14,7 +14,7 @@ zstyle ':z4h:' auto-update-days '28'
 zstyle ':z4h:bindkey' keyboard  'pc'
 
 # Start tmux if not already in tmux.
-zstyle ':z4h:' start-tmux command tmux -u new -A -D -t hacky
+zstyle ':z4h:' start-tmux command tmux -u new -A -D -t fedora
 
 # Whether to move prompt to the bottom when zsh starts and on Ctrl+L.
 zstyle ':z4h:' prompt-at-bottom 'no'
@@ -59,7 +59,7 @@ z4h install ohmyzsh/ohmyzsh || return
 z4h init || return
 
 # Extend PATH.
-path=(~/bin $path)
+path=(~/bin ~/Desktop/Devel/SDK/flutter/bin /home/sohan/Desktop/Devel/Android-sdk/cmdline-tools/latest/bin $path)
 
 # Export environment variables.
 export GPG_TTY=$TTY
@@ -107,7 +107,7 @@ alias tree='tree -a -I .git'
 # Add flags to existing aliases.
 #alias ls="${aliases[ls]:-ls} -A"
 # Add flags to existing aliases.
-alias ls='colorls'
+alias ls='lsd'
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
